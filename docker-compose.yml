@@ -1,0 +1,51 @@
+version: '3.8'
+services:
+  dev-db:
+    image: postgres:13
+    ports:
+      - "5434:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    networks:
+      - freecodecamp
+
+  test-db:
+    image: postgres:13
+    ports:
+      - "5435:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: nest
+    networks:
+      - freecodecamp
+
+  # test-db:
+  #   image: postgres:13
+  #   ports:
+  #     - "5435:5432"
+  #   environment:
+  #     POSTGRES_USER: postgres
+  #     POSTGRES_PASSWORD: 123
+  #     POSTGRES_DB: nest
+  #   networks:
+  #     - freecodecamp
+
+  # remix:
+  #   image: remix:latest
+  #   container_name: remix
+  #   ports:
+  #     - "8089:3000"
+  #   environment:
+  #     NODE_ENV: development
+  #   volumes:
+  #     - .:/app
+  #     - /app/node_modules
+  #   command: npm run start:dev
+  #   networks:
+  #     - freecodecamp
+
+networks:
+  freecodecamp:

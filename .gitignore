@@ -1,0 +1,45 @@
+# Node.js
+node_modules/
+dist/
+build/
+.env
+.env.*.local
+.env.test
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Coverage and test reports
+coverage/
+.nyc_output/
+jest-html-reporters-*.html
+test-results/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Optional npm cache directory
+.npm/
+
+# Debug files
+*.tsbuildinfo
+
+# Temporary files
+tmp/
+temp/
+
+# Git-specific files
+.git/
